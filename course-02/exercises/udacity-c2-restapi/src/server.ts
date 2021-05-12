@@ -1,3 +1,4 @@
+require('dotenv').config();
 import express from 'express';
 import { sequelize } from './sequelize';
 
@@ -22,7 +23,7 @@ import { V0MODELS } from './controllers/v0/model.index';
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     next();
   });
-
+console.log('finished');
   app.use('/api/v0/', IndexRouter)
 
   // Root URI call
